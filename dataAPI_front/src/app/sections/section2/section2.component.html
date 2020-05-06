@@ -1,0 +1,29 @@
+<!--<p>section2 works!</p>-->
+
+<div class="section-container">
+    <h2>
+        Section 2
+    </h2>
+    <table class="table table-inverse table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Client</th>
+                <th>Amount</th>
+                <th>Order Placed</th>
+                <th>Order Fullfilled</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td>{{ order.id }}</td>
+                <td>{{ order.client.name}}</td>
+                <td>{{ order.total }}</td>
+                <td>{{ order.placed | date: 'short' }}</td>
+                <td>{{ order.fullfilled | date: 'short' }}</td>
+                <td>Status</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
