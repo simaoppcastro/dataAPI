@@ -29,7 +29,7 @@ namespace dataAPI_back
         public void ConfigureServices(IServiceCollection services)
         {
             // user secrets
-            _connectionString = Configuration["secretConnectingString"];
+            _connectionString = Configuration["secretConnectionString"];
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             
