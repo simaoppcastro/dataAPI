@@ -17,6 +17,7 @@ namespace dataAPI_back
 {
     public class Startup
     {
+        private string _connectionString = null;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,8 +28,13 @@ namespace dataAPI_back
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // user secrets
+            _connectionString = Configuration["secretConnectingString"];
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddEntityFrameworkNpgsql().AddDbContext<ApiContext>(opt => opt.UseNpgsql())    
+            
+            services.AddEntityFrameworkNpgsql().AddDbContext<ApiContext>(
+                opt => opt.UseNpgsql(_connectionString));    
         }
 
 

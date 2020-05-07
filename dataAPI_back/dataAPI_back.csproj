@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <UserSecretId>dataAPI-Secrets</UserSecretId>
+    <UserSecretsId>dataAPI-Secrets</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

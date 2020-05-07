@@ -1,0 +1,7 @@
+C:\Users\simao\Dropbox\Dir_simaoppcastro\Eng\Mestrado\1ano\2semestre\EngenhariaSoft\final_project\dataAPI\dataAPI_back\obj\Debug\netcoreapp2.1\dataAPI_back.csprojAssemblyReference.cache
+C:\Users\simao\Dropbox\Dir_simaoppcastro\Eng\Mestrado\1ano\2semestre\EngenhariaSoft\final_project\dataAPI\dataAPI_back\obj\Debug\netcoreapp2.1\dataAPI_back.csproj.CoreCompileInputs.cache
+C:\Users\simao\Dropbox\Dir_simaoppcastro\Eng\Mestrado\1ano\2semestre\EngenhariaSoft\final_project\dataAPI\dataAPI_back\obj\Debug\netcoreapp2.1\dataAPI_back.RazorAssemblyInfo.cache
+C:\Users\simao\Dropbox\Dir_simaoppcastro\Eng\Mestrado\1ano\2semestre\EngenhariaSoft\final_project\dataAPI\dataAPI_back\obj\Debug\netcoreapp2.1\dataAPI_back.RazorAssemblyInfo.cs
+C:\Users\simao\Dropbox\Dir_simaoppcastro\Eng\Mestrado\1ano\2semestre\EngenhariaSoft\final_project\dataAPI\dataAPI_back\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\simao\Dropbox\Dir_simaoppcastro\Eng\Mestrado\1ano\2semestre\EngenhariaSoft\final_project\dataAPI\dataAPI_back\obj\Debug\netcoreapp2.1\dataAPI_back.AssemblyInfoInputs.cache
+C:\Users\simao\Dropbox\Dir_simaoppcastro\Eng\Mestrado\1ano\2semestre\EngenhariaSoft\final_project\dataAPI\dataAPI_back\obj\Debug\netcoreapp2.1\dataAPI_back.AssemblyInfo.cs
