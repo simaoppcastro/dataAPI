@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAPI.Models
+namespace dataAPI_back.Models
 {
     public class ApiContext : DbContext
     {

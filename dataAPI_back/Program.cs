@@ -14,13 +14,13 @@ namespace dataAPI_back
     {
         public static void Main(string[] args)
         {
-            // CreateWebHostBuilder(args).Build().Run();
-            CreateWebHostBuilder(args).Run();
+            CreateWebHostBuilder(args).Build().Run();
+            // CreateWebHostBuilder(args).Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+                .UseStartup<Startup>();
+                //.Build();
     }
 }
