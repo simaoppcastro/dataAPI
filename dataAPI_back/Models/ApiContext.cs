@@ -8,9 +8,11 @@ namespace dataAPI_back.Models
 {
     public class ApiContext : DbContext
     {
+        // API context that extendes DbContext
         // constructor
         public ApiContext(DbContextOptions<ApiContext> options) : base(options) { }
 
+        // DbSets
         // 3 tables -> for each entety model
         public DbSet<Client> Clients { get; set; }
         public DbSet<Orders> Orders { get; set; }
