@@ -35,11 +35,16 @@ namespace dataAPI_back
             
             services.AddEntityFrameworkNpgsql().AddDbContext<ApiContext>(
                 opt => opt.UseNpgsql(_connectionString));    
+
+            // call DataSeed during Startup
+            // only one time
+            services.AddTransient<DataSeed>();
         }
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        // public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DataSeed seedData)
         {
             if (env.IsDevelopment())
             {
@@ -50,8 +55,13 @@ namespace dataAPI_back
                 app.UseHsts();
             }
 
+            // pass number of clients, and number of orders -> random data
+            seedData.SeedData(20, 1000);
+
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            
         }
     }
 }

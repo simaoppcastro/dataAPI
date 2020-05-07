@@ -29,8 +29,8 @@ namespace dataAPI_back
             // Orders
             if(!_context.Orders.Any())
             {
-                // SeedOrders(iNumOrders); 
-                SeedOrders(iNumClients); 
+                SeedOrders(iNumOrders); 
+                // SeedOrders(iNumClients); 
             }
             // Servers
             if(!_context.Servers.Any())
