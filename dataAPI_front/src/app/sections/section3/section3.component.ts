@@ -7,6 +7,8 @@ const SAMPLE_SERVERS = [
   {id: 2, name: 'HTTP server', isOnline:false},
   {id: 3, name: 'MQTT server', isOnline:true},
   {id: 4, name: 'Sensors server', isOnline:true},
+  {id: 5, name: 'SmartSensor01', isOnline:true},
+  {id: 6, name: 'SmartSensor02', isOnline:true},
 ]
 
 @Component({
