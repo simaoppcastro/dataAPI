@@ -24,23 +24,28 @@ namespace dataAPI_back
             // Clients
             if(!_context.Clients.Any())
             {
-                SeedClients(iNumClients); 
+                SeedClients(iNumClients);
+                // commit changes to database 
+                _context.SaveChanges(); 
             }
             // Orders
             if(!_context.Orders.Any())
             {
                 SeedOrders(iNumOrders); 
-                // SeedOrders(iNumClients); 
+                // SeedOrders(iNumClients);
+                // commit changes to database 
+                _context.SaveChanges(); 
             }
             // Servers
             if(!_context.Servers.Any())
             {
                 // SeedServers(iNumClients); 
                 SeedServers(); 
+                // commit changes to database 
+                _context.SaveChanges();
             }
             
-            // commit changes to database 
-            _context.SaveChanges();
+            
         }
 
         // Servers
