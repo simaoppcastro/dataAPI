@@ -56,7 +56,9 @@ namespace dataAPI_back
             }
 
             // pass number of clients, and number of orders -> random data
-            seedData.SeedData(20, 1000);
+            var nClients = 20;
+            var nOrders = 1000;
+            seedData.SeedData(nClients, nOrders);
 
             app.UseHttpsRedirection();
             app.UseMvc();

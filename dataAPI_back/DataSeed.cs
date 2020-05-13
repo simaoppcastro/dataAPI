@@ -17,6 +17,8 @@ namespace dataAPI_back
             _context = context;
         }
 
+        // private static List<string> states = Helpers.states;
+
         // populate data (clients, orders, servers)
         public void SeedData(int iNumClients, int iNumOrders)
         {   
@@ -52,7 +54,9 @@ namespace dataAPI_back
         // private void SeedServers(int iNumClients)
         private void SeedServers()
         {
-            List<Server> servers = BuildServerList();
+            // List<Server> servers = BuildServerList();
+            var servers = BuildServerList();
+            
             foreach(var server in servers)
             {
                 _context.Add(server);
@@ -125,7 +129,8 @@ namespace dataAPI_back
         // Orders
         private void SeedOrders(int iNumOrders)
         {
-            List<Orders> orders = BuildOrderList(iNumOrders);
+            // List<Orders> orders = BuildOrderList(iNumOrders);
+            var orders = BuildOrderList(iNumOrders);
 
             foreach (var order in orders)
             {
@@ -140,15 +145,18 @@ namespace dataAPI_back
 
             for(var i = 0; i <= iNumOrders; i++)
             {
-                var randClientId = rand.Next(_context.Clients.Count());
+                // var randClientId = rand.Next(_context.Clients.Count());
+                var randClientId = rand.Next(1, _context.Clients.Count());
                 var placed = Helpers.GetRandomOrderPlaced();
                 var completed = Helpers.GetRandomOrderCompleted(placed);
+                var clients = _context.Clients.ToList();
 
                 orders.Add(new Orders{
                     Id = i,
                     // Client = Helpers.GetRandomClient(),
                     // Client = _context.Clients.Where(c => c.Id == randClientId),
-                    Client = _context.Clients.First(c => c.Id == randClientId),
+                    // Client = _context.Clients.First(c => c.Id == randClientId),
+                    Client = clients.First(c => c.Id == randClientId),
                     Total = Helpers.GetRandomOrderTotal(),
                     Placed = placed,
                     Completed = completed
@@ -160,9 +168,10 @@ namespace dataAPI_back
 
 
         // Clients
-        private void SeedClients(int iNumClients)
+        private void SeedClients(int n)
         {
-            List<Client> clients = BuildClientList(iNumClients);
+            // List<Client> clients = BuildClientList(iNumClients);
+            var clients = BuildClientList(n);
 
             foreach (var client in clients)
             {
