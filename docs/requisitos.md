@@ -1,3 +1,7 @@
 # Engenharia de Software
-## dataAPI
-### Requisitos
+## Requisitos de Sistema - dataAPI
+
+* dataAPI
+    * DataCharts
+    * Clients
+    * Servers
