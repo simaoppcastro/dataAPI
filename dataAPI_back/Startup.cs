@@ -62,7 +62,14 @@ namespace dataAPI_back
             seedData.SeedData(nClients, nOrders);
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            // app.UseMvc();
+            
+            // routes customization
+            // lambda expression -> template to the route
+            app.UseMvc(routes => routes.MapRoute(
+                // url estructure
+                "default", "api/{controller}/{action}/{id?}"
+            ));
 
             
         }
