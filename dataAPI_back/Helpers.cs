@@ -48,7 +48,9 @@ namespace dataAPI_back
 
         internal static DateTime GetRandomOrderPlaced()
         {
+            // random time for the orders
             var end = DateTime.Now;
+            // max in the pass = 90 days = max history (temp)
             var start = end.AddDays(-90);
             TimeSpan possibleSpan = end - start;
             // hours, minutes, seconds -> TimeSpan
