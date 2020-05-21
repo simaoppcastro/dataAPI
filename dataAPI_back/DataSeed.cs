@@ -66,6 +66,9 @@ namespace dataAPI_back
         // private List<Server> BuildServerList(int iNumSer)
         private List<Server> BuildServerList()
         {
+            // list of servers input is manual -> my option
+            // like the method we used in the front-end (angular -> dataAPI_front)
+            // static list of servers
             return new List<Server>()
             {
                 new Server{
@@ -143,7 +146,8 @@ namespace dataAPI_back
             var orders = new List<Orders>();
             var rand = new Random();
 
-            for(var i = 0; i <= iNumOrders; i++)
+            // for(var i = 0; i <= iNumOrders; i++)
+            for(var i = 1; i <= iNumOrders; i++)
             {
                 // var randClientId = rand.Next(_context.Clients.Count());
                 var randClientId = rand.Next(1, _context.Clients.Count());
@@ -163,6 +167,7 @@ namespace dataAPI_back
                 });
             }
 
+            // return the list of orders
             return orders;
         }
 
@@ -184,7 +189,8 @@ namespace dataAPI_back
             var clients = new List<Client>();
             var names = new List<string>();
 
-            for (var i = 0; i <= iNumClients; i++)
+            // for (var i = 0; i <= iNumClients; i++)
+            for (var i = 1; i <= iNumClients; i++)
             {
                 var name = Helpers.MakeUniqueClientName(names);
                 names.Add(name);

@@ -38,6 +38,7 @@ namespace dataAPI_back
 
             // call DataSeed during Startup
             // only one time
+            // transient instance og a service
             services.AddTransient<DataSeed>();
         }
 
