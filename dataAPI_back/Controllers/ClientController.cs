@@ -36,6 +36,25 @@ namespace dataAPI_back.Controllers
             // return the client specified
             return Ok(client);   
         }
+
+        // POST api/values
+        [HttpPost]
+        public IActionResult Post([FromBody] Client client)
+        {   
+            if(client == null)
+            {
+                return BadRequest();    
+            }
+
+            // else add the new client
+            _context.Clients.Add(client);
+            // and save the changes 
+            _context.SaveChanges();
+
+            // http 201 response
+            // arguments -> route, object values for the route (is this case the id of the new client), actual object (the new client) 
+            return CreatedAtRoute("GetClient", new {id = client.Id}, client);
+        }
     }
 
 }
