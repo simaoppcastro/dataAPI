@@ -34,10 +34,73 @@ namespace dataAPI_back.Controllers
             // after getting the "raw" data - specified the data in pages and sizes to display this orders
             var page = new PaginatedResponse<Orders>(data, pageIndex, pageSize);
 
+            var totalCount = data.Count();
+            // https://docs.microsoft.com/en-us/dotnet/api/system.math.ceiling?view=netcore-3.1
+            var totalPages = Math.Ceiling((double)totalCount / pageSize);
+
+            // response
+            var response = new 
+            {
+                // PaginatedResponse
+                Page = page,
+                TotalPages = totalPages 
+            };
+
+            // http 200 status response with the response
             // return Ok response
-            return Ok();
+            return Ok(response);
         }
 
+        // display orders by state
+        // state => city example
+        [HttpGet("ByState")]
+        public IActionResult ByState()
+        {
+            var _orders = _context.Orders.Include(o => o.Client).ToList();
+
+            var groupedResult = _orders.GroupBy(o => o.Client.State)
+                .ToList()
+                .Select(g => new
+                {
+                    State = g.Key,
+                    Total = g.Sum(x => x.Total)
+                }).OrderByDescending(res => res.Total)
+                    .ToList();
+
+            // return the group result            
+            return Ok(groupedResult);
+        }
+
+        // display orders by client
+        [HttpGet("ByClient/{n}")]
+        // n => max number of clients
+        // usage example -> grab the top 10 clients
+        public IActionResult ByClient(int m)
+        {
+            var _orders = _context.Orders.Include(o => o.Client).ToList();
+
+            var groupedResult = _orders.GroupBy(o => o.Client.Id)
+                .ToList()
+                .Select(g => new
+                {
+                    Name = _context.Clients.Find(g.Key).Name,
+                    Total = g.Sum(x => x.Total)
+                }).OrderByDescending(res => res.Total)
+                    .Take(m)
+                    .ToList();
+
+            // return the group result            
+            return Ok(groupedResult);
+        }
+
+        [HttpGet("GetOrder/{}", Name = "GetOrder")]
+        public IActionResult GetOrder(int id)
+        {
+            var order = _context.Orders
+                .Include(o => o.Client)
+                .First(t => t.Id == id);
+            return Ok(order);   
+        }
 
     }   
 }
