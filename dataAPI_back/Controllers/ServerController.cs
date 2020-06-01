@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
-namespace Advantage.API.Demo.Controllers
+namespace dataAPI_back.Controllers
 {
     [Route("api/[controller]")]
     public class ServerController : Controller
