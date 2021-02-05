@@ -30,7 +30,7 @@ Desenvolver uma API com o propósito de oferecer uma plataforma de gestão de da
 
 ## [Project Repository - dataAPI](https://github.com/simaoppcastro/dataAPI)
 
-## [Modelação do Sistema](https://github.com/UL-ES-2019-2020/SimaoCastro/tree/master/docs)
+## [Modelação do Sistema](https://github.com/dataAPI/tree/master/docs)
 
 ### [User Stories](https://github.com/UL-ES-2019-2020/SimaoCastro/tree/master/docs/UserStories.md)
 
