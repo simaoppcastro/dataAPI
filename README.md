@@ -30,17 +30,17 @@ Desenvolver uma API com o propósito de oferecer uma plataforma de gestão de da
 
 ## [Project Repository - dataAPI](https://github.com/simaoppcastro/dataAPI)
 
-## [Modelação do Sistema](https://github.com/dataAPI/tree/master/docs)
+## [Modelação do Sistema](https://github.com/simaoppcastro/dataAPI/tree/master/docs)
 
-### [User Stories](https://github.com/UL-ES-2019-2020/SimaoCastro/tree/master/docs/UserStories.md)
+### [User Stories](https://github.com/simaoppcastro/dataAPI/tree/master/docs/UserStories.md)
 
-### [Diagrama de Actividades](https://github.com/dataAPI/tree/master/docs/ActivityDiagram.md)
+### [Diagrama de Actividades](https://github.com/simaoppcastro/dataAPI/tree/master/docs/ActivityDiagram.md)
 
-### [Diagrama de Casos de Uso](https://github.com/dataAPI/tree/master/docs/UseCaseDiagrams.md)
+### [Diagrama de Casos de Uso](https://github.com/simaoppcastro/dataAPI/tree/master/docs/UseCaseDiagrams.md)
 
-### [Diagramas de Sequência](https://github.com/dataAPI/tree/master/docs//SequenceDiagram.md)
+### [Diagramas de Sequência](https://github.com/simaoppcastro/dataAPI/tree/master/docs//SequenceDiagram.md)
 
-### [Diagrama de Classes](https://github.com/dataAPI/tree/master/docs//ClassDiagram.md)
+### [Diagrama de Classes](https://github.com/simaoppcastro/dataAPI/tree/master/docs//ClassDiagram.md)
 
 ## Conclusão
 Projeto da unidade curricular de Engenharia de Software: Desenvolvimento de uma WebAPI com modelação e implementação de sistema.
